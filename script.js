@@ -68,7 +68,7 @@ var tbody = document.createElement("tbody");
     page.innerText = "prev"
     page.onclick=function (){
       let j = localStorage.getItem("currentbutton");
-    if(j<2){return}
+     if(j<2 || document.querySelector(".active").innerText=="first"){return}
      const activeindex = document.querySelector(".active").innerText;
       document.querySelector(".active").removeAttribute("class")
       if(activeindex>1){
